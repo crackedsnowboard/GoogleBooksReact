@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import "./style.css"
-import {useBookContext} from "../../utils/GlobalState"
-import {NEW_QUERY} from "../../utils/action"
+import { useBookContext } from "../../utils/GlobalState"
+import { NEW_QUERY } from "../../utils/action"
 import API from '../../utils/API'
 
 function SearchBar() {
@@ -18,18 +18,21 @@ function SearchBar() {
                 books.push(book.volumeInfo)
             }
 
-            dispatch({type: NEW_QUERY, results: books})
+            dispatch({ type: NEW_QUERY, results: books })
         })
     }
 
     return (
-        <div className="text-center">
+
+        <div className="ml-2">
             <form>
-                <input
-                    ref={searchQuery}
-                />
-                <br/>
-                <button onClick={event => handleSearch(event)}>Search</button>
+                <div class="form-group">
+                    <input type="text" class="form-control" aria-describedby="emailHelp" 
+                        ref={searchQuery}
+                        placeholder="Search by title here!"
+                    />
+                </div>
+                <button type="button ml-2" class="btn btn-success" onClick={event => handleSearch(event)}>Search</button>
             </form>
         </div>
     )

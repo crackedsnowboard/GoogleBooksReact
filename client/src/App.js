@@ -9,7 +9,7 @@ import { BookProvider } from "./utils/GlobalState"
 function App() {
 
   return (
-    <div>
+    <div className="container">
       <BookProvider>
         <Router>
           <Switch>
