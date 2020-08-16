@@ -1,0 +1,3 @@
+export const SET_CURRENT_BOOK = "SET_CURRENT_BOOK"
+export const UPDATE_BOOKS = "UPDATE_BOOKS"
+export const NEW_QUERY = "NEW_QUERY"
