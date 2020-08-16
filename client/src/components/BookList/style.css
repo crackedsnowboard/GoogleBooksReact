@@ -10,9 +10,11 @@
 }
 
 .book-item {
-    background: lightgreen;
-    border-radius: 2%;
+    /* background: lightgreen; */
     padding: 2%;
-    background-color: rgba(38, 202, 85, .3);
-    height: 230px
+    /* background-color: rgba(200,200, 200, .3); */
+    height: 230px;
+    border-bottom-style: solid;
+    border-width: 1px;
 }
+

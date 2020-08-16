@@ -33,16 +33,24 @@ function BookList() {
 
     const [state, dispatch] = useBookContext()
 
-    return (
+    if (state.searchResults) {
+        return (
         <div className="mt-3">
-            <Row>
-                {state.searchResults ? state.searchResults.map(book => {
+            <Row attributes="divider-row">
+                {state.searchResults.map(book => {
                     return <BookListItem book={book} />
-                }) :
-                    <p className="text-center">Your searched books will appear here!</p>}
+                })}
             </Row>
         </div>
     )
+    }
+
+    else {
+        return (
+            <div className="text-center">Your search results will appear here!</div>
+        )
+    }
+    
 
 }
 
