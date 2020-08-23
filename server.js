@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/googlebooksdb",
+  process.env.MONGODB_URI || "mongodb+srv://UCBdbUser:vu4ZqZpFDxB1rj6K@cluster0.t9mju.mongodb.net/GoogleBooksReact",
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
